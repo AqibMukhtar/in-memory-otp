@@ -1,0 +1,28 @@
+{
+  "name": "in-memory-otp",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript package for generating and validating OTP (One Time Password) maintaining high performance using in-memory database.",
+  "main": "otp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AqibMukhtar/in-memory-otp.git"
+  },
+  "keywords": [
+    "otp",
+    "otp-generator",
+    "high-performance-otp"
+  ],
+  "author": {
+    "name": "Aqib Mukhtar",
+    "email": "aqibmukhtar08@gmail.com",
+    "url": "https://www.linkedin.com/in/aqibmukhtar"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AqibMukhtar/in-memory-otp/issues"
+  },
+  "homepage": "https://github.com/AqibMukhtar/in-memory-otp#readme"
+}
