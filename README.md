@@ -52,5 +52,5 @@ This function validates the OTP generated against the customer/user. It returns 
 * No database is required.
 * OTP will be created only when it is necessary.
 * OTP will be removed from the memory (RAM) when its time is expired.
-* Effecient and fast because no read/write operation is performed on the disk.
+* Efficient and fast because no read/write operation is performed on the disk.
 
