@@ -1,5 +1,6 @@
 let otps = {};
 let usedOTPs = [];
+let otpDigits = 4; //default 4 digits
 
 function startOTPTimer(currentTime) {
     setInterval(() => {
@@ -11,16 +12,28 @@ function startOTPTimer(currentTime) {
     }, 1000);
 }
 
+function setOTPDigits(digits) {
+    otpDigits = digits;
+}
+
 function generateOTP(username, expirayTime) {
-    let otp = Math.floor(Math.random() * 10000);
+    let otp = getOTP();
     while (usedOTPs.includes(otp))
-        otp = Math.floor(Math.random() * 10000);
+        otp = getOTP();
     usedOTPs.push(otp);
     otps[username] = {
         otp,
         expiray: new Date().getTime() + (expirayTime * 60 * 1000)
     };
     return otp;
+}
+
+function getOTP() {
+    let otp = '';
+    for (let i = 0; i < otpDigits; i++ ) {
+        otp += Math.floor(Math.random() * 10);
+    }
+    return Number(otp);
 }
 
 function validateOTP(username, otp) {
@@ -33,5 +46,6 @@ function validateOTP(username, otp) {
 module.exports = {
     startOTPTimer,
     generateOTP,
-    validateOTP
+    validateOTP,
+    setOTPDigits
 }
