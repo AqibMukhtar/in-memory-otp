@@ -20,6 +20,9 @@ const otp = require('in-memory-otp');
 // Start OTP functionality
 otp.startOTPTimer(new Date().getTime());
 
+//Set otp digits as 6
+otp.setOTPDigits(6);
+
 // Generate OTP for user1
 const user1OTP = otp.generateOTP('user1', 5);
 console.log('Generated OTP for user1 is:', user1OTP);
@@ -41,6 +44,8 @@ This function starts the OTP functionality in the program. It only requires time
 ```javascript
 otp.startOTPTimer(new Date().getTime());
 ```
+## otp.setOTPDigits(noOfDigits)
+This function set the number of digits of OTP generated. This is an optional method, by default the number of digits is set to 4.
 
 ## otp.generateOTP(uniqueIndentifierOfUser, expirayTimeInMinutes)
 This function generates and returns the OTP against the unique identifier of the user/customer. Its first parameter is the identifier and send parameter is the amount of time (in minutes) for which we want to generate OTP.
