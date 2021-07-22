@@ -1,6 +1,6 @@
 {
   "name": "in-memory-otp",
-  "version": "1.0.1",
+  "version": "1.4.0",
   "description": "A lightweight JavaScript package for generating and validating OTP (One Time Password) maintaining high performance using in-memory database.",
   "main": "otp.js",
   "scripts": {
