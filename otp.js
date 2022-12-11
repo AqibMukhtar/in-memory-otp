@@ -28,10 +28,18 @@ function generateOTP(username, expirayTime) {
     return otp;
 }
 
+/**
+ * This function still returns an otp lesser than 4 at default.
+ * Because it generates 0 at the beginning some times
+ * and if "0024" is passed to Number()
+ * it returns 24, hence having an otp lesser than 4
+ * 
+ * Generating a number between 0 and 9 and adding 1 should fix this
+ */
 function getOTP() {
     let otp = '';
     for (let i = 0; i < otpDigits; i++ ) {
-        otp += Math.floor(Math.random() * 10);
+        otp += Math.floor(Math.random() * 9) + 1;
     }
     return Number(otp);
 }
